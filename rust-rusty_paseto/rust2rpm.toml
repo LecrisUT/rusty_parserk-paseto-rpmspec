@@ -1,0 +1,7 @@
+[[package.extra-patches]]
+comments = [
+    "https://github.com/rrrodzilla/rusty_paseto/issues/36",
+    "Bump dependencies",
+]
+file = "rusty_paseto-0.6.1-Bump_dependencies.diff"
+number = 10

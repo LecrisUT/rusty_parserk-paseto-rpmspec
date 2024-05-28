@@ -12,6 +12,9 @@ Summary:        Type-driven, ergonomic alternative to JWT for secure stateless P
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/rusty_paseto
 Source:         %{crates_source}
+# * https://github.com/rrrodzilla/rusty_paseto/issues/36
+# * Bump dependencies
+Patch10:       rusty_paseto-0.6.1-Bump_dependencies.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
