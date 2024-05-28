@@ -22,6 +22,15 @@ packages:
     actions: *Actions-Package-rust2rpm
 
   # Dependencies
+  rust-argon2:
+    # https://bugzilla.redhat.com/show_bug.cgi?id=2258880
+    paths: [ rust-argon2 ]
+    specfile_path: rust-argon2.spec
+    upstream_package_name: argon2
+    downstream_package_name: rust-argon2
+    actions: &Actions-Package-no-rust2rpm
+      <<: *Actions-Package-rust2rpm
+      fix-spec-file: [] # Do nothing
   rust-primes:
     # Required by rusty_paseto
     # https://github.com/wackywendell/primes
