@@ -21,6 +21,16 @@ packages:
     downstream_package_name: rust-rusty_paseto
     actions: *Actions-Package-rust2rpm
 
+  # Dependencies
+  rust-primes:
+    # Required by rusty_paseto
+    # https://github.com/wackywendell/primes
+    paths: [ rust-primes ]
+    specfile_path: rust-primes.spec
+    upstream_package_name: primes
+    downstream_package_name: rust-primes
+    actions: *Actions-Package-rust2rpm
+
 srpm_build_deps:
   - rust2rpm
 

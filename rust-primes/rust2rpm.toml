@@ -1,0 +1,13 @@
+[requires]
+build = [
+    "tomcli",
+]
+
+[scripts.prep]
+post = [
+    "# Do not depend on criterion; it is needed only for benchmarks.",
+    "tomcli set Cargo.toml del dev-dependencies.criterion",
+]
+
+[package]
+summary = "Package for calculating primes using the Sieve of Eratosthenes"
