@@ -5,15 +5,15 @@
 %global crate rusty_paserk
 
 Name:           rust-rusty_paserk
-Version:        0.3.0
+Version:        0.4.0
 Release:        %autorelease
 Summary:        Platform Agnostic Serializable Keys
 
 License:        MIT
 URL:            https://crates.io/crates/rusty_paserk
 Source:         %{crates_source}
-# * Bump paseto dependency
-Patch10:       rust-rusty_paserk-0.3.0-Bump_dependencies.diff
+# * Relax libtest-mimic dependency
+Patch10:       rust-rusty_paserk-0.4.0-Relax_dependencies.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -50,18 +50,6 @@ use the "default" feature of the "%{crate}" crate.
 %files       -n %{name}+default-devel
 %ghost %{crate_instdir}/Cargo.toml
 
-%package     -n %{name}+aes-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+aes-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "aes" feature of the "%{crate}" crate.
-
-%files       -n %{name}+aes-devel
-%ghost %{crate_instdir}/Cargo.toml
-
 %package     -n %{name}+arbitrary-devel
 Summary:        %{summary}
 BuildArch:      noarch
@@ -74,114 +62,6 @@ use the "arbitrary" feature of the "%{crate}" crate.
 %files       -n %{name}+arbitrary-devel
 %ghost %{crate_instdir}/Cargo.toml
 
-%package     -n %{name}+argon2-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+argon2-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "argon2" feature of the "%{crate}" crate.
-
-%files       -n %{name}+argon2-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+blake2-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+blake2-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "blake2" feature of the "%{crate}" crate.
-
-%files       -n %{name}+blake2-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+chacha20-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+chacha20-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "chacha20" feature of the "%{crate}" crate.
-
-%files       -n %{name}+chacha20-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+ctr-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+ctr-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "ctr" feature of the "%{crate}" crate.
-
-%files       -n %{name}+ctr-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+curve25519-dalek-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+curve25519-dalek-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "curve25519-dalek" feature of the "%{crate}" crate.
-
-%files       -n %{name}+curve25519-dalek-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+ed25519-dalek-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+ed25519-dalek-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "ed25519-dalek" feature of the "%{crate}" crate.
-
-%files       -n %{name}+ed25519-dalek-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+hmac-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+hmac-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "hmac" feature of the "%{crate}" crate.
-
-%files       -n %{name}+hmac-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+p384-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+p384-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "p384" feature of the "%{crate}" crate.
-
-%files       -n %{name}+p384-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+pbkdf2-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+pbkdf2-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "pbkdf2" feature of the "%{crate}" crate.
-
-%files       -n %{name}+pbkdf2-devel
-%ghost %{crate_instdir}/Cargo.toml
-
 %package     -n %{name}+serde-devel
 Summary:        %{summary}
 BuildArch:      noarch
@@ -192,18 +72,6 @@ This package contains library source intended for building other packages which
 use the "serde" feature of the "%{crate}" crate.
 
 %files       -n %{name}+serde-devel
-%ghost %{crate_instdir}/Cargo.toml
-
-%package     -n %{name}+sha2-devel
-Summary:        %{summary}
-BuildArch:      noarch
-
-%description -n %{name}+sha2-devel %{_description}
-
-This package contains library source intended for building other packages which
-use the "sha2" feature of the "%{crate}" crate.
-
-%files       -n %{name}+sha2-devel
 %ghost %{crate_instdir}/Cargo.toml
 
 %package     -n %{name}+v3-devel

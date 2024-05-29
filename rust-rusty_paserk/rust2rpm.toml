@@ -1,6 +1,6 @@
 [[package.extra-patches]]
 comments = [
-    "Bump paseto dependency",
+    "Relax libtest-mimic dependency",
 ]
-file = "rust-rusty_paserk-0.3.0-Bump_dependencies.diff"
+file = "rust-rusty_paserk-0.4.0-Relax_dependencies.diff"
 number = 10
