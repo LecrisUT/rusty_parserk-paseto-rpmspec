@@ -12,6 +12,8 @@ Summary:        Platform Agnostic Serializable Keys
 License:        MIT
 URL:            https://crates.io/crates/rusty_paserk
 Source:         %{crates_source}
+# * Bump paseto dependency
+Patch10:       rust-rusty_paserk-0.3.0-Bump_dependencies.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 

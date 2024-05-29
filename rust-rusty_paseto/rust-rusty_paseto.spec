@@ -5,16 +5,15 @@
 %global crate rusty_paseto
 
 Name:           rust-rusty_paseto
-Version:        0.6.1
+Version:        0.7.0
 Release:        %autorelease
 Summary:        Type-driven, ergonomic alternative to JWT for secure stateless PASETO tokens
 
 License:        MIT OR Apache-2.0
 URL:            https://crates.io/crates/rusty_paseto
 Source:         %{crates_source}
-# * https://github.com/rrrodzilla/rusty_paseto/issues/36
-# * Bump dependencies
-Patch10:       rusty_paseto-0.6.1-Bump_dependencies.diff
+# * Remove example and patch dependencies
+Patch10:       rust-rusty_paseto-0.6.1-Patch_dependencies.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
 
@@ -394,6 +393,8 @@ use the "v4_public" feature of the "%{crate}" crate.
 %prep
 %autosetup -n %{crate}-%{version} -p1
 %cargo_prep
+# Remove examples
+rm -r examples
 
 %generate_buildrequires
 %cargo_generate_buildrequires

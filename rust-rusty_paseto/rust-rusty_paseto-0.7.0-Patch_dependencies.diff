@@ -1,0 +1,41 @@
+--- rusty_paseto-0.7.0/Cargo.toml	1970-01-01T00:00:01+00:00
++++ rusty_paseto-0.7.0/Cargo.toml	2024-05-29T06:10:21.273803+00:00
+@@ -37,10 +37,6 @@
+ [lib]
+ doctest = true
+
+-[[example]]
+-name = "actix_identity"
+-required-features = ["default"]
+-
+ [dependencies.aes]
+ version = "0.7.5"
+ features = ["ctr"]
+@@ -71,7 +67,7 @@
+ optional = true
+
+ [dependencies.erased-serde]
+-version = "0.4.5"
++version = "0.4.4"
+ optional = true
+
+ [dependencies.hex]
+@@ -83,7 +79,7 @@
+ optional = true
+
+ [dependencies.iso8601]
+-version = "0.6.1"
++version = ">=0.4.2"
+
+ [dependencies.p384]
+ version = "0.13.0"
+@@ -123,9 +119,6 @@
+ [dependencies.zeroize]
+ version = "1.4.3"
+ features = ["zeroize_derive"]
+-
+-[dev-dependencies.actix-identity]
+-version = "0.4.0"
+ 
+ [dev-dependencies.actix-utils]
+ version = "3.0.0"

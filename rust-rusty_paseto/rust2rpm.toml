@@ -1,7 +1,12 @@
 [[package.extra-patches]]
 comments = [
-    "https://github.com/rrrodzilla/rusty_paseto/issues/36",
-    "Bump dependencies",
+    "Remove example and patch dependencies",
 ]
-file = "rusty_paseto-0.6.1-Bump_dependencies.diff"
+file = "rust-rusty_paseto-0.7.0-Patch_dependencies.diff"
 number = 10
+
+[scripts.prep]
+post = [
+    "# Remove examples",
+    "rm -r examples",
+]
