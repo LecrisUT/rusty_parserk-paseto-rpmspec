@@ -1,8 +1,11 @@
 [[package.extra-patches]]
 comments = [
-    "Remove example and patch dependencies",
+    "Patch Cargo.toml:",
+    "- Remove examples",
+    "- Relax erased-serde to 0.4.4",
+    "- Relax iso8601 to >=0.4.2",
 ]
-file = "rust-rusty_paseto-0.7.0-Patch_dependencies.diff"
+file = "rust-rusty_paseto-0.7.1-Patch_dependencies.diff"
 number = 10
 
 [scripts.prep]

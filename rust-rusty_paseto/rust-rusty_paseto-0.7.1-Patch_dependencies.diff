@@ -1,5 +1,5 @@
---- rusty_paseto-0.7.0/Cargo.toml	1970-01-01T00:00:01+00:00
-+++ rusty_paseto-0.7.0/Cargo.toml	2024-05-29T06:10:21.273803+00:00
+--- rusty_paseto-0.7.1/Cargo.toml	1970-01-01T00:00:01+00:00
++++ rusty_paseto-0.7.1/Cargo.toml	2024-06-03T07:24:19.255233+00:00
 @@ -37,10 +37,6 @@
  [lib]
  doctest = true
@@ -29,13 +29,22 @@
 
  [dependencies.p384]
  version = "0.13.0"
-@@ -123,9 +119,6 @@
- [dependencies.zeroize]
+@@ -124,9 +120,6 @@
  version = "1.4.3"
  features = ["zeroize_derive"]
--
+
 -[dev-dependencies.actix-identity]
 -version = "0.4.0"
- 
+-
  [dev-dependencies.actix-utils]
  version = "3.0.0"
+
+@@ -137,7 +130,7 @@
+ version = "1.0.45"
+
+ [dev-dependencies.erased-serde]
+-version = "0.4.5"
++version = "0.4.4"
+
+ [dev-dependencies.primes]
+ version = "0.3.0"
