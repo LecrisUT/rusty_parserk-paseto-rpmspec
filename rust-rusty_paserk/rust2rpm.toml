@@ -1,6 +1,7 @@
 [[package.extra-patches]]
 comments = [
-    "Relax libtest-mimic dependency",
+    "Patch Cargo.toml:",
+    "- Relax libtest-mimic to >=0.6.1",
 ]
 file = "rust-rusty_paserk-0.4.0-Relax_dependencies.diff"
 number = 10

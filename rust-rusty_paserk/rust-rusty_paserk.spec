@@ -12,7 +12,8 @@ Summary:        Platform Agnostic Serializable Keys
 License:        MIT
 URL:            https://crates.io/crates/rusty_paserk
 Source:         %{crates_source}
-# * Relax libtest-mimic dependency
+# * Patch Cargo.toml:
+# * - Relax libtest-mimic to >=0.6.1
 Patch10:       rust-rusty_paserk-0.4.0-Relax_dependencies.diff
 
 BuildRequires:  cargo-rpm-macros >= 24
